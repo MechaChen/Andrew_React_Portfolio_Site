@@ -1,0 +1,54 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+h1 {
+  font-size: $l-size;
+  margin: $m-size 0 3px;
+}
+
+a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: lighten(#66c, 20%);
+  transition: 0.5s;
+  position: relative;
+}
+
+a:hover {
+  color: #66c;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #99e;
+  transition: 0.5s 0.1s;
+}
+
+.is-active {
+  color: #66c;
+}
+
+.is-active::after {
+  width: 100%;
+}
